@@ -12,3 +12,41 @@
   font-size: large;
   font-weight: bold;
 }
+
+.fixed-footer {
+  margin-top: 1rem;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align : center;
+  background-color: yellow;
+}
+
+.nav {
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 10;
+}
+
+.nav li {
+display: inline-block;
+font-size: 14px;
+padding: 20px;
+}
+
+a:link, a:visited {
+  background-color: none;
+  color: black;
+  padding: 14px 20px;
+  text-align: center; 
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: yellowgreen;
+  color: whitesmoke;
+}
