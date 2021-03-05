@@ -6,6 +6,15 @@
 
 ## Available Scripts
 
+## Install
+Some basic Git commands are:
+
+```
+$ git clone https://github.com/sbnsun/fashion-house.git
+$ cd frontend
+$ npm install
+```
+
 In the project directory, you can run:
 
 ### `cd frontend`
