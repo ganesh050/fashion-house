@@ -10,17 +10,17 @@ const Footer = () => {
 	            <a href="/g/terms-conditions">
 	                Terms &amp; Conditions
 	            </a>
-              <li>
+          </li>
+          <li>
             <a href="/g/create-ads">
               Create Ads
-              </a>
-              </li>
-              <li>
-              <a href="/g/privacy-policy">
-                Privacy Policy
-              </a>
-              </li>
-	        </li>
+            </a>
+          </li>
+          <li>
+            <a href="/g/privacy-policy">
+              Privacy Policy
+            </a>
+          </li>
 	        <li>
             Copyright &copy; 2021 FashionHouse. All rights reserved.
 	        </li>
