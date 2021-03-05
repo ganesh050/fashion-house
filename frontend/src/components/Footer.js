@@ -1,16 +1,31 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 const Footer = () => {
   return (
     <footer>
-      <Container>
-        <Row>
-          <Col className="text-center py-3">
+      <section class="footer--column footer--col-tandc">
+	    <ul class="footer--mini-menu legal-links">
+	        <li>
+	            <a href="/g/terms-conditions">
+	                Terms &amp; Conditions
+	            </a>
+              <li>
+            <a href="/g/create-ads">
+              Create Ads
+              </a>
+              </li>
+              <li>
+              <a href="/g/privacy-policy">
+                Privacy Policy
+              </a>
+              </li>
+	        </li>
+	        <li>
             Copyright &copy; 2021 FashionHouse. All rights reserved.
-          </Col>
-        </Row>
-      </Container>
+	        </li>
+	    </ul>
+    </section>
     </footer>
   );
 };
