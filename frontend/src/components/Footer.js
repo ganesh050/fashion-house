@@ -6,6 +6,9 @@ const Footer = () => {
     <footer name = "fixed-footer">
       <div class="py-2 text-center">
         <br/>
+        <a href="./">Contact Us</a>
+        <a href="./">Give us Feedback</a>
+        <a href="./">We are hiring</a>
         <a href = "./">Terms &amp; Conditions</a>  
         <a href = "./">Create Ads </a>
         <a href="./"> Privacy Policy </a>
