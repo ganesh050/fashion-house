@@ -1,10 +1,10 @@
 import React from "react";
-import { Nav } from "react-bootstrap";
+import { Nav, Navbar } from "react-bootstrap";
 
 const HomePage = () => {
   return (
     <div>
-      <Nav class="navbar navbar-expand-sm navbar-light bg-light sticky-top">
+      <Navbar class="navbar navbar-expand-sm navbar-light navbar bg-light sticky-top">
         <button
           class="navbar-toggler"
           type="button"
@@ -17,15 +17,19 @@ const HomePage = () => {
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav container justify-content-between">
+          <div class="navbar-nav container nav justify-content-center">
             <Nav.Link class="nav-item nav-link active" href="#">
               New <span class="sr-only">(current)</span>
+            </Nav.Link>
+
+            <Nav.Link class="nav-item nav-link" href="#">
+              Women
             </Nav.Link>
             <Nav.Link class="nav-item nav-link" href="#">
               Men
             </Nav.Link>
             <Nav.Link class="nav-item nav-link" href="#">
-              Women
+              Traditional
             </Nav.Link>
             <Nav.Link class="nav-item nav-link" href="#">
               Accessories
@@ -35,12 +39,12 @@ const HomePage = () => {
             </Nav.Link>
           </div>
         </div>
-      </Nav>
-      <div class="container">
-        <div class="py-2 text-center font-italic font-weight-bold">
+      </Navbar>
+      <div class="container-fluid">
+        <div class="py-1 text-center font-italic font-weight-bold text-dark bg-light">
           <p>
-            Winter Sale. 30% Discount in <a href="/">Men</a> and{" "}
-            <a href="/">Women</a>
+            Winter Sale. 30% Discount in <a href="/">Men's</a> and{" "}
+            <a href="/">Women's</a> Jeans
           </p>
         </div>
       </div>
@@ -48,14 +52,29 @@ const HomePage = () => {
       <div
         class="container"
         style={{
+          backgroundColor: "#F5EFEF",
           backgroundImage: "url(/image/img.jpg)",
-          //width: "100%",
-          height: "500px",
+          backgroundSize: "cover",
+          height: "300px",
           backgroundRepeat: "no-repeat",
-          //backgroundSize: 'contain',
           backgroundPosition: "center",
         }}
-      ></div>
+      >
+        <div class="row h-100">
+          <div class="col-sm-12 my-auto">
+            <div class="align-self-center mx-auto mb-3">
+              <button type="button" class="btn btn-primary">
+                Click Me!
+              </button>
+            </div>
+            <div class="align-self-center mx-auto">
+              <button type="button" class="btn btn-primary">
+                Click Me!
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
