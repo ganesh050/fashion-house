@@ -1,10 +1,10 @@
 import React from "react";
-import { Nav, Navbar } from "react-bootstrap";
+import { Nav } from "react-bootstrap";
 
 const HomePage = () => {
   return (
     <div>
-      <nav class="navbar navbar-expand-sm navbar-light bg-light sticky-top">
+      <Nav class="navbar navbar-expand-sm navbar-light bg-light sticky-top">
         <button
           class="navbar-toggler"
           type="button"
@@ -18,24 +18,24 @@ const HomePage = () => {
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav container justify-content-between">
-            <a class="nav-item nav-link active" href="#">
+            <Nav.Link class="nav-item nav-link active" href="#">
               New <span class="sr-only">(current)</span>
-            </a>
-            <a class="nav-item nav-link" href="#">
+            </Nav.Link>
+            <Nav.Link class="nav-item nav-link" href="#">
               Men
-            </a>
-            <a class="nav-item nav-link" href="#">
+            </Nav.Link>
+            <Nav.Link class="nav-item nav-link" href="#">
               Women
-            </a>
-            <a class="nav-item nav-link" href="#">
+            </Nav.Link>
+            <Nav.Link class="nav-item nav-link" href="#">
               Accessories
-            </a>
-            <a class="nav-item nav-link" href="#">
+            </Nav.Link>
+            <Nav.Link class="nav-item nav-link" href="#">
               Clearance
-            </a>
+            </Nav.Link>
           </div>
         </div>
-      </nav>
+      </Nav>
       <div class="container">
         <div class="py-2 text-center font-italic font-weight-bold">
           <p>
