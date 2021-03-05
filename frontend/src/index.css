@@ -1,33 +1,10 @@
-/* main {
-  min-height: 80vh;
-  background-image: url(./img.jpg);
-  width: auto;
-  height: 400px;
-  background-size: 100% 100%;
-} */
-.brand-name {
+
+/* .brand-name {
   font-family: Optima;
   font-weight: bold;
-}
+} */
 .top-nav-wrap {
   background-color: #f5efef;
-}
-/* .navbar-brand-centered {
-  margin: auto;
-  padding-top: 20;
-  position: absolute;
-  text-align: center;
-  font-family: Optima;
-  font-size: 1rem;
-  font-weight: bold;
-  display: flex;
-} */
-.navbar-brand-centered {
-  position: absolute;
-  font-weight: bold;
-  font-family: Optima;
-  font-size: large;
-  display: flex;
 }
 
 .navbar-brand {
