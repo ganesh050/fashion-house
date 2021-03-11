@@ -1,9 +1,9 @@
 import React from "react";
-import { Nav, Navbar } from "react-bootstrap";
+import { Nav } from "react-bootstrap";
 
 const HomePage = () => {
   return (
-    <div className='container'>
+    <div className="container">
       {/* <Navbar class="navbar navbar-expand-sm navbar-light navbar bg-light sticky-top">
         <button
           class="navbar-toggler"
