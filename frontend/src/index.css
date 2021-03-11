@@ -1,15 +1,11 @@
 
-/* .brand-name {
-  font-family: Optima;
-  font-weight: bold;
-} */
 .top-nav-wrap {
   background-color: #f5efef;
 }
 
 .navbar-brand {
   font-family: Optima;
-  font-size: large;
+  font-size: x-large;
   font-weight: bold;
 }
 
@@ -21,7 +17,7 @@
   left: 0;
   width: 100%;
   text-align : center;
-  background-color: yellow;
+  /* background-color: yellow; */
 }
 
 .nav {
@@ -37,6 +33,10 @@ font-size: 14px;
 padding: 20px;
 }
 
+/* .categories{
+  background-color:#F5EFEF;
+} */
+
 a:link, a:visited {
   background-color: none;
   color: black;
@@ -46,7 +46,7 @@ a:link, a:visited {
   display: inline-block;
 }
 
-a:hover, a:active {
+/* a:hover, a:active {
   background-color: yellowgreen;
   color: whitesmoke;
-}
+} */
