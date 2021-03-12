@@ -1,16 +1,17 @@
-import React, { Component } from "react";
+import React from "react";
 
-class ContactForm extends Component {
-    constructor() {
-        super();
-        this.state = {
+function ContactForm() 
+{
+    render() 
+    {
+        this.state = 
+        {
             name: "",
             email: "",
             message: "",
             status: "Submit"
         };
     }
-    // render() {}
 }
 
 export default ContactForm;

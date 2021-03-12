@@ -6,11 +6,11 @@ import HomePage from './components/HomePage';
 
 const App = () => {
   return (
-    <>
+    <div>
       <Header />
       <HomePage/>
       <Footer />
-    </>
+    </div>
   );
 };
 export default App;
