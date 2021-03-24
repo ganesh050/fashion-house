@@ -1,20 +1,21 @@
 import React from "react";
-import { } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import {} from "react-bootstrap";
 
 const Footer = () => {
   return (
-    <footer name = "fixed-footer">
-      <div class="py-2 text-center">
-        <br/>
-        <a href="./">Contact Us</a>
-        <a href="./">Give us Feedback</a>
-        <a href="./">We are hiring</a>
-        <a href = "./">Terms &amp; Conditions</a>  
-        <a href = "./">Create Ads </a>
-        <a href="./"> Privacy Policy </a>
+    <footer name="fixed-footer">
+      <div class="bg bg-custom-1 py-2 text-center">
+        <br />
+        <Link to="./conditons">Terms &amp; Conditions</Link>
+        <Link to="./contact">Contact Us</Link>
+        <Link to="./feedback">Feedback</Link>
+        <Link to="./career">Career</Link>
+        <Link to="./ads">Create Ads </Link>
+        <Link to="./policy"> Privacy Policy </Link>
       </div>
       <div class="py-2 text-center font-tahoma font-weight-bold">
-            Copyright &copy; 2021 FashionHouse. All rights reserved.
+        Copyright &copy; 2021 FashionHouse. All rights reserved.
       </div>
     </footer>
   );
