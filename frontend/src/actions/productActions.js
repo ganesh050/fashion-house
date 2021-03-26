@@ -12,7 +12,7 @@ import {
 export const listProducts = () => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_LIST_REQUEST });
-    console.log("Works fine here");
+    // console.log("Works fine here");
 
     const { data } = await axios.get("/api/products");
 

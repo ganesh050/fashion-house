@@ -83,6 +83,20 @@ const HomeScreen = () => {
           ))}
         </Row>
       )}
+      <h3 className="my-3">MEN'S JEANS</h3>
+      {loading ? (
+        <Loader />
+      ) : error ? (
+        <Message variant ='danger'>{error} </Message>
+      ) : (
+        <Row>
+          {products.map((product) => (
+            <Col key={product._id} sm={6} md={4} lg={4} xl={4}>
+              <Product product={product} />
+            </Col>
+          ))}
+        </Row>
+      )}
     </>
   );
 };
