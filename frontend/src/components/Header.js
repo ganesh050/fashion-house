@@ -4,7 +4,7 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 
 const Header = () => {
   return (
-    <header>
+    <header className='sticky-top'>
       <Navbar bg="light" exapnd="lg" collapseOnSelect>
         <Container>
           <LinkContainer to="/">
@@ -15,17 +15,17 @@ const Header = () => {
             <Nav className="ml-auto">
               <LinkContainer to="/search">
                 <Nav.Link>
-                  <i className="fas fa-search"></i>
+                  <i className="fas fa-search fa-2x"></i>
                 </Nav.Link>
               </LinkContainer>
               <LinkContainer to="/login">
                 <Nav.Link>
-                  <i className="fas fa-user"></i>
+                  <i className="fas fa-user fa-2x"></i>
                 </Nav.Link>
               </LinkContainer>
               <LinkContainer to="/cart">
                 <Nav.Link>
-                  <i className="fas fa-shopping-bag"></i>
+                  <i className="fas fa-shopping-bag fa-2x"></i>
                 </Nav.Link>
               </LinkContainer>
             </Nav>
