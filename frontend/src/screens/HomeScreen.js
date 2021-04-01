@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { Row, Col, Button } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import Product from "../components/Product";
 import Message from "../components/Message";
 import Loader from "../components/Loader";
+import Categories from "../components/Categories";
 import { listProducts } from "../actions/productActions";
 
 const HomeScreen = () => {
-
-
-
   const dispatch = useDispatch();
 
   const productList = useSelector((state) => state.productList);
@@ -20,10 +18,9 @@ const HomeScreen = () => {
   useEffect(() => {
     dispatch(listProducts());
   }, [dispatch]);
-
   return (
     <>
-      <div className="bg bg-custom-1 p-0  text-center font-Mshtakan sticky-top ">
+      {/* <div className="bg bg-custom-1 p-0  text-center font-Mshtakan sticky-top ">
         <br />
         <Link to="./New">New</Link>
         <Link to="./Women">Women </Link>
@@ -31,8 +28,10 @@ const HomeScreen = () => {
         <Link to="./Traditional">Traditional </Link>
         <Link to="./Accessories"> Accessories </Link>
         <Link to="./Clearance">Clearance </Link>
-      </div>
+      </div> */}
+      <Categories />
       <div
+        className="rounded"
         my-2
         p-3
         style={{
@@ -44,7 +43,7 @@ const HomeScreen = () => {
           backgroundPosition: "center",
         }}
       >
-        <div className=" align-content-center row h-100">
+        {/* <div className=" align-content-center row h-100">
           <div className="col-lg-10 my-auto">
             <div className="align-self-center mx-3 mb-3">
               <Button
@@ -67,13 +66,27 @@ const HomeScreen = () => {
               </Button>
             </div>
           </div>
+        </div> */}
+        <div className="container align-content-center row h-100">
+          <div>
+            <p className="align-self-center mx-3 mb-3">
+              <Link to="/Women" class="btn btn-outline rounded-pill">
+                Shop Women
+              </Link>
+            </p>
+            <p className="align-self-center mx-3">
+              <Link to="/Men" class="btn btn-outline rounded-pill">
+                Shop Men
+              </Link>
+            </p>
+          </div>
         </div>
       </div>
       <h3 className="my-3">WOMEN'S JEANS</h3>
       {loading ? (
         <Loader />
       ) : error ? (
-        <Message variant ='danger'>{error} </Message>
+        <Message variant="danger">{error} </Message>
       ) : (
         <Row>
           {products.map((product) => (
@@ -87,7 +100,7 @@ const HomeScreen = () => {
       {loading ? (
         <Loader />
       ) : error ? (
-        <Message variant ='danger'>{error} </Message>
+        <Message variant="danger">{error} </Message>
       ) : (
         <Row>
           {products.map((product) => (
