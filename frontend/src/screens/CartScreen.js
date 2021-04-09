@@ -41,12 +41,14 @@ const CartScreen = ({ match, location, history }) => {
       <Col md={8}>
         <h2 strong>Bag</h2>
         <hr></hr>
-        {/* <Row>
-          <Col md = {3}>Item</Col>
-          <Col className = 'align-center'>Price</Col>
-          <Col className = 'align-center'>Qty</Col>
-              </Row>
-              <hr></hr> */}
+        <ListGroup variant="flush">
+          <Row>
+            <Col md={3}>Item</Col>
+            <Col className="align-center">Price</Col>
+            <Col className="align-center">Qty</Col>
+          </Row>
+        </ListGroup>
+        <hr></hr>
         {cartItems.length === 0 ? (
           <Message>
             {" "}
@@ -117,18 +119,10 @@ const CartScreen = ({ match, location, history }) => {
               </Row>
               <Row>
                 <Col>
-                  <p>Shipping</p>
+                  <p>Total Items in Cart</p>
                 </Col>
-                <Col>FREE</Col>
+                <Col>{cartItems.reduce((acc, item) => acc + item.qty, 0)}</Col>
               </Row>
-              {/* <h2>
-                Subtotal ({cartItems.reduce((acc, item) => acc + item.qty, 0)})
-                items
-              </h2>
-              $
-              {cartItems
-                .reduce((acc, item) => acc + item.qty * item.price, 0)
-                .toFixed(2)} */}
             </ListGroup.Item>
             <ListGroup.Item>
               <Button
@@ -137,7 +131,7 @@ const CartScreen = ({ match, location, history }) => {
                 disabled={cartItems.length === 0}
                 onClick={checkOutHandler}
               >
-                Place Order
+                Checkout
               </Button>
             </ListGroup.Item>
           </ListGroup>
