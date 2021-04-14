@@ -33,12 +33,17 @@
   margin: 0.1rem;
 }
 
-.btn-custom-1 {
-  background-color: #5e8999;
-}
-
 .bg-custom-1 {
   background-color: #f6f9fa;
+  
+}
+
+.btn-outline {
+  color: #4fbfa8;
+  background-color: #5e8999;
+  /* border-color: #4fbfa8; */
+  font-weight: bold;
+  letter-spacing: none;
 }
 
 
@@ -61,8 +66,3 @@ a:visited {
   text-decoration: none;
   display: inline-block;
 }
-
-/* a:hover, a:active {
-  background-color: yellowgreen;
-  color: whitesmoke;
-} */
