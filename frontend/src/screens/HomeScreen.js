@@ -21,7 +21,7 @@ const HomeScreen = ({ match }) => {
   const { loading, error, products, page, pages } = productList;
 
   useEffect(() => {
-    dispatch(listProducts(keyword, pageNumber));
+    dispatch(listProducts(keyword));
   }, [dispatch, keyword, pageNumber]);
   return (
     <>
@@ -39,7 +39,6 @@ const HomeScreen = ({ match }) => {
           backgroundPosition: "center",
         }}
       >
-        
         <div className="container align-content-center row h-100">
           <div>
             <p className="align-self-center mx-3 mb-3">

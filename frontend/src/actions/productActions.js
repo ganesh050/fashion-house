@@ -29,11 +29,9 @@ export const listProducts = (keyword = "", pageNumber = "") => async (
 ) => {
   try {
     dispatch({ type: PRODUCT_LIST_REQUEST });
-
-    const { data } = await axios.get(
-      `/api/products?keyword=${keyword}&pageNumber=${pageNumber}`
-    );
-
+    console.log("Workds here");
+    const { data } = await axios.get("/api/products");
+    console.log("Workds here");
     dispatch({
       type: PRODUCT_LIST_SUCCESS,
       payload: data,
