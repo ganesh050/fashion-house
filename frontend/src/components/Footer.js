@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import {} from "react-bootstrap";
-// import "./Footer.css";
+import "./Footer.css";
 import PrivacyPolicy from "../screens/PrivacyPolicy";
 // import Icon from "../components/icons";
 
