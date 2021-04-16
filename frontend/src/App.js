@@ -18,8 +18,12 @@ import UserListScreen from "./screens/UserListScreen";
 import UserEditScreen from "./screens/UserEditScreen";
 import ProductListScreen from "./screens/ProductListScreen";
 import ProductEditScreen from "./screens/ProductEditScreen";
+<<<<<<< HEAD
 import OrderListScreen from "./screens/OrderListScreen";
 // import PrivacyPolicy from "./screens/PrivacyPolicy";
+=======
+import OrderListScreen from "./screens/OrderListScreen"
+>>>>>>> 09db123290a3b05fff387378fd40e543802e684a
 
 const App = () => {
   return (
@@ -30,9 +34,12 @@ const App = () => {
         <Route path="/shipping" component={ShippingScreen} />
         <Route path="/payment" component={PaymentScreen} />
         <Route path="/placeorder" component={PlaceOrderScreen} />
+
         <Route path="/login" component={LoginScreen} />
         <Route path="/register" component={RegisterScreen} />
+
         <Route path="/profile" component={ProfileScreen} />
+        
         <Route path="/product/:id" component={ProductScreen} />
         <Route path="/cart/:id?" component={CartScreen} />
         <Route path="/admin/userlist" component={UserListScreen} />

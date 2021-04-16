@@ -7,6 +7,10 @@ import {
   Nav,
   Container,
   NavDropdown,
+  Button,
+  Row,
+  Col,
+  Badge,
 } from "react-bootstrap";
 import SearchBox from "./SearchBox";
 import { logout } from "../actions/userActions";
@@ -26,7 +30,7 @@ const Header = ({ history }) => {
   };
   return (
     <header className="sticky-top">
-      <Navbar bg="light" exapnd="lg" collapseOnSelect>
+      <Navbar bg="light" expand="lg" collapseOnSelect>
         <Container>
           <LinkContainer to="/">
             <Navbar.Brand>FASHION HOUSE</Navbar.Brand>
@@ -37,13 +41,14 @@ const Header = ({ history }) => {
               <Route
                 render={({ history }) => <SearchBox history={history} />}
               />
-
               <LinkContainer to="/cart">
                 <Nav.Link>
+                  <i className="fas fa-shopping-cart" /> Cart
                   {cartItems.length > 0 && (
-                    <span className="badge badge-info">{cartItems.length}</span>
+                    <span className="badge badge-info">
+                      {cartItems.length}
+                    </span>
                   )}
-                  <i className="fas fa-shopping-cart"></i> Cart
                 </Nav.Link>
               </LinkContainer>
 
@@ -59,7 +64,7 @@ const Header = ({ history }) => {
               ) : (
                 <LinkContainer to="/login">
                   <Nav.Link>
-                    <i className="fas fa-user"></i> Sign In
+                    <i className="fas fa-user" /> Sign In
                   </Nav.Link>
                 </LinkContainer>
               )}

@@ -34,43 +34,64 @@ const LoginScreen = ({ location, history }) => {
 
   return (
     <FormContainer>
-      <h1>Sign In</h1>
-      {error && <Message variant="danger">{error}</Message>}
-      {loading && <Loader />}
-      <Form onSubmit={submitHandler}>
-        <Form.Group controlId="email">
-          <Form.Label>Email Address</Form.Label>
-          <Form.Control
-            type="email"
-            placeholder="Enter email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          ></Form.Control>
-        </Form.Group>
+     
+      <div className="outer">
+        <div className="inner">
+          <Form onSubmit = {submitHandler}>
+            <h3>Log in</h3>
+            {error && <Message variant="danger">{error}</Message>}
+            {loading && <Loader />}
+            <Form.Group controlId="email">
+              <Form.Label>Email</Form.Label>
+              <input
+                type="email"
+                className="form-control"
+                placeholder="email@example.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <Form.Text className="text-muted">
+                We'll never share your email with anyone else.
+              </Form.Text>
+            </Form.Group>
+            <Form.Group controlId="password">
+              <Form.Label>Password</Form.Label>
+              <input
+                type="password"
+                className="form-control"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </Form.Group>
+            <Form.Group controlId="formBasicCheckbox">
+              <div className="custom-control custom-checkbox">
+                <input
+                  type="checkbox"
+                  className="custom-control-input"
+                  id="customCheck1"
+                />
 
-        <Form.Group controlId="password">
-          <Form.Label>Password</Form.Label>
-          <Form.Control
-            type="password"
-            placeholder="Enter password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          ></Form.Control>
-        </Form.Group>
-
-        <Button type="submit" variant="primary">
-          Sign In
-        </Button>
-      </Form>
-
-      <Row className="py-3">
-        <Col>
-          New Customer?{" "}
-          <Link to={redirect ? `/register?redirect=${redirect}` : "/register"}>
-            Register
-          </Link>
-        </Col>
-      </Row>
+                <Form.Label
+                  className="custom-control-label"
+                  htmlFor="customCheck1"
+                >
+                  Remember me
+                </Form.Label>
+              </div>
+            </Form.Group>
+            <button type="submit" className="btn btn-dark btn-lg btn-block">
+              Sign in
+            </button>
+            New Customer?{" "}
+            <Link
+              to={redirect ? `/register?redirect=${redirect}` : "/register"}
+            >
+              Register{" "}
+            </Link>
+          </Form>
+        </div>
+      </div>
     </FormContainer>
   );
 };
