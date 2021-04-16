@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { Form, Button, Row, Col } from "react-bootstrap";
+import { Table, Form, Button, Row, Col } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
+import UserNav from "../components/UserNav";
 import Message from "../components/Message";
 import Loader from "../components/Loader";
-import FormContainer from "../components/FormContainer";
-import { register } from "../actions/userActions";
+import { getUserDetails, updateUserProfile } from "../actions/userActions";
+import { listMyOrders } from "../actions/orderActions";
+// import { USER_UPDATE_PROFILE_RESET } from "../constants/userConstants";
 
-const RegisterScreen = ({ location, history }) => {
+const AccountScreen = ({ location, history }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -16,34 +18,50 @@ const RegisterScreen = ({ location, history }) => {
 
   const dispatch = useDispatch();
 
-  const userRegister = useSelector((state) => state.userRegister);
-  const { loading, error, userInfo } = userRegister;
+  const userDetails = useSelector((state) => state.userDetails);
+  const { loading, error, user } = userDetails;
 
-  const redirect = location.search ? location.search.split("=")[1] : "/";
+  const userLogin = useSelector((state) => state.userLogin);
+  const { userInfo } = userLogin;
+
+  const userUpdateProfile = useSelector((state) => state.userUpdateProfile);
+  const { success } = userUpdateProfile;
 
   useEffect(() => {
-    if (userInfo) {
-      history.push(redirect);
+    if (!userInfo) {
+      history.push("/login");
+    } else {
+      if (!user) {
+        dispatch(getUserDetails("profile"));
+        
+      } else {
+        setName(user.name);
+        setEmail(user.email);
+      }
     }
-  }, [history, userInfo, redirect]);
+  }, [dispatch, history, userInfo, user, success]);
 
   const submitHandler = (e) => {
     e.preventDefault();
     if (password !== confirmPassword) {
-      setMessage("Password do not match");
+      setMessage("Passwords do not match");
     } else {
-      dispatch(register(name, email, password));
+      dispatch(updateUserProfile({ id: user._id, name, email, password }));
     }
   };
 
-  return (
-    <FormContainer>
-      <div className="outer">
-        <div className="inner">
-          <h1>Sign Up</h1>
-          {message && <Message variant="danger">{message}</Message>}
-          {error && <Message variant="danger">{error}</Message>}
-          {loading && <Loader />}
+  const profileUpdate = () => (
+    <Row>
+      <Col md={3}>
+        <h2>User Profile</h2>
+        {message && <Message variant="danger">{message}</Message>}
+        {}
+        {success && <Message variant="success">Profile Updated</Message>}
+        {loading ? (
+          <Loader />
+        ) : error ? (
+          <Message variant="danger">{error}</Message>
+        ) : (
           <Form onSubmit={submitHandler}>
             <Form.Group controlId="name">
               <Form.Label>Name</Form.Label>
@@ -85,20 +103,32 @@ const RegisterScreen = ({ location, history }) => {
               ></Form.Control>
             </Form.Group>
 
-            <Button type="submit" className="btn btn-dark btn-lg btn-block">
-              Register
+            <Button type="submit" variant="primary">
+              Update
             </Button>
-            <p className="forgot-password text-right">
-              Already registered?{" "}
-              <Link to={redirect ? `/login?redirect=${redirect}` : "/login"}>
-                Login
-              </Link>
-            </p>
           </Form>
+        )}
+      </Col>
+    </Row>
+  );
+
+  return (
+    <div className="container-fluid">
+      <div className="row">
+        <div className="col-md-2">
+          <UserNav />
+        </div>
+        <div className="col">
+          {loading ? (
+            <h4 className="text-danger">Loading..</h4>
+          ) : (
+            <h4>Password Update</h4>
+          )}
+          {profileUpdate()}
         </div>
       </div>
-    </FormContainer>
+    </div>
   );
 };
 
-export default RegisterScreen;
+export default AccountScreen;
