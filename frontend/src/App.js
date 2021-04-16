@@ -18,7 +18,8 @@ import UserListScreen from "./screens/UserListScreen";
 import UserEditScreen from "./screens/UserEditScreen";
 import ProductListScreen from "./screens/ProductListScreen";
 import ProductEditScreen from "./screens/ProductEditScreen";
-import OrderListScreen from "./screens/OrderListScreen"
+import OrderListScreen from "./screens/OrderListScreen";
+// import PrivacyPolicy from "./screens/PrivacyPolicy";
 
 const App = () => {
   return (
@@ -57,8 +58,9 @@ const App = () => {
           exact
         />
         <Route path="/" component={HomeScreen} exact />
-        <Footer />
+        {/* <Route path="/" component ={PrivacyPolicy} exact /> */}
       </Container>
+      <Footer />
     </Router>
   );
 };
