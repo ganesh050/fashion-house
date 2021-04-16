@@ -2,8 +2,7 @@ import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import {} from "react-bootstrap";
 import "./Footer.css";
-import PrivacyPolicy from "../components/PrivacyPolicy";
-import Icon from "../components/icons";
+// import Icon from "../components/icons";
 
 const Footer = () => {
   return (
@@ -41,10 +40,10 @@ const Footer = () => {
           <div className = "col">
             <h5> Social </h5>
             <ul className = "list-unstyled">
-              <li><Icon className = "fab fa-facebook-f"/>Facebook</li>
-              <li><Icon className= "fab fa-instagram"/> Instagram</li>
-              <li><Icon className= "fab fa-twitter"/> Twitter</li>
-              <li><Icon className= "fab fa-youtube"/> Youtube</li>
+              <li><i className = "fab fa-facebook-f"/> Facebook</li>
+              <li><i className= "fab fa-instagram"/> Instagram</li>
+              <li><i className= "fab fa-twitter"/> Twitter</li>
+              <li><i className= "fab fa-youtube"/> Youtube</li>
             </ul>
           </div>
       </div>
