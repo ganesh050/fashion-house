@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import {} from "react-bootstrap";
-import "./Footer.css";
+// import "./Footer.css";
 // import Icon from "../components/icons";
 
 const Footer = () => {
@@ -40,11 +40,7 @@ const Footer = () => {
           <div className = "col">
             <h5> Social </h5>
             <ul className = "list-unstyled">
-<<<<<<< HEAD
-              <li><i className= "fab fa-facebook-f"/>  Facebook</li>
-=======
               <li><i className = "fab fa-facebook-f"/> Facebook</li>
->>>>>>> 09db123290a3b05fff387378fd40e543802e684a
               <li><i className= "fab fa-instagram"/> Instagram</li>
               <li><i className= "fab fa-twitter"/> Twitter</li>
               <li><i className= "fab fa-youtube"/> Youtube</li>
