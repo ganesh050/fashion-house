@@ -1,12 +1,9 @@
 import React from "react";
-import { NavLink, Link } from "react-router-dom";
-import {} from "react-bootstrap";
-// import "./Footer.css";
-// import Icon from "../components/icons";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <div className="container">
       <hr/>
       <div className = "row">
         <br/>
