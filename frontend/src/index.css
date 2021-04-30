@@ -19,7 +19,6 @@
   left: 0;
   width: 100%;
   text-align: center;
-  /* background-color: yellow; */
 }
 
 .nav {
@@ -67,10 +66,6 @@ h3 {
   font-size: 14px;
   padding: 20px;
 }
-
-/* .categories{
-  background-color:#F5EFEF;
-} */
 
 a:link,
 a:visited {
@@ -129,6 +124,8 @@ html,
 .custom-control-label {
   font-weight: 400;
 }
+<<<<<<< HEAD
+=======
 
 /* carousel */
 .carousel-item-next,
@@ -164,3 +161,4 @@ html,
     font-size: 2.5vw;
   }
 }
+>>>>>>> 2c33449bf5be5c54e8bb23dfdb93decd66bfd36f
