@@ -68,12 +68,23 @@ const PlaceOrderScreen = ({ history }) => {
           <ListGroup variant="flush">
             <ListGroup.Item>
               <h2>Shipping</h2>
-              <p>
-                <strong>Address:</strong>
-                {cart.shippingAddress.address},{cart.shippingAddress.city}{" "}
-                {cart.shippingAddress.postalCode},{" "}
-                {cart.shippingAddress.country}
-              </p>
+                      <address>
+                        <strong>Address</strong>
+                        <br></br>
+                        {cart.shippingAddress.address}
+                        <br></br>
+                        {cart.shippingAddress.city}
+                        <br></br>
+                        {cart.shippingAddress.postalCode}
+                        <br></br>
+                        {cart.shippingAddress.country}
+                      </address>
+
+                      <address>
+                        {/* <strong>Full Name</strong><br>
+  <a href="mailto:#">exam.ple@example.com</a> */}
+                      </address>
+                   
             </ListGroup.Item>
 
             <ListGroup.Item>

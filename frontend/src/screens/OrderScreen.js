@@ -97,19 +97,24 @@ const OrderScreen = ({ match, history }) => {
           <ListGroup variant="flush">
             <ListGroup.Item>
               <h2>Shipping</h2>
-              <p>
-                <strong>Name: </strong> {order.user.name}
-              </p>
-              <p>
-                <strong>Email: </strong>{" "}
-                <a href={`mailto:${order.user.email}`}>{order.user.email}</a>
-              </p>
-              <p>
-                <strong>Address:</strong>
-                {order.shippingAddress.address}, {order.shippingAddress.city}{" "}
-                {order.shippingAddress.postalCode},{" "}
+              <address>
+                <strong>Address</strong>
+                <br></br>
+                {order.shippingAddress.address}
+                <br></br>
+                {order.shippingAddress.city}
+                <br></br>
+                {order.shippingAddress.postalCode}
+                <br></br>
                 {order.shippingAddress.country}
-              </p>
+              </address>
+
+              <address>
+                <strong>{order.user.name}</strong>
+                <br></br>
+                <a href={`mailto:${order.user.email}`}>{order.user.email}</a>
+              </address>
+
               {order.isDelivered ? (
                 <Message variant="success">
                   Delivered on {order.deliveredAt}

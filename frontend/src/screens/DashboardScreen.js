@@ -1,11 +1,12 @@
 import React from "react";
 import { ListGroup, Tab, Row, Col } from "react-bootstrap";
+import ManageOrderScreen from "./ManageOrderScreen";
 import ProfileScreen from "./ManageOrderScreen";
 import ProfileUpdateScreen from "./ProfileUpdateScreen";
 
 const DashboardScreen = ({ location, history }) => {
   return (
-    <Tab.Container id="list-group-tabs" defaultActiveKey="#link1">
+    <Tab.Container id="list-group-tabs">
       <Row>
         <Col sm={4}>
           <ListGroup>
@@ -23,7 +24,7 @@ const DashboardScreen = ({ location, history }) => {
               <ProfileUpdateScreen />
             </Tab.Pane>
             <Tab.Pane eventKey="#2">
-              <ProfileScreen />
+              <ManageOrderScreen />
             </Tab.Pane>
           </Tab.Content>
         </Col>
