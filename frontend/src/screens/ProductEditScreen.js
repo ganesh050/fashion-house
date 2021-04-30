@@ -173,6 +173,16 @@ const ProductEditScreen = ({ match, history }) => {
               ></Form.Control>
             </Form.Group>
 
+            {/* <Form.Group controlId="subCategory">
+              <Form.Label>Sub Category</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Enter sub category"
+                value={subCategory}
+                onChange={(e) => setSubCategory(e.target.value)}
+              ></Form.Control>
+            </Form.Group> */}
+
             <Form.Group controlId="description">
               <Form.Label>Description</Form.Label>
               <Form.Control
@@ -184,7 +194,7 @@ const ProductEditScreen = ({ match, history }) => {
             </Form.Group>
 
             <Button type="submit" variant="primary">
-              Update
+              Update/Add
             </Button>
           </Form>
         )}

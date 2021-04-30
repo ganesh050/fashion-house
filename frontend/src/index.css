@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800");
 
 .top-nav-wrap {
   background-color: #f5efef;
@@ -27,10 +27,10 @@
   margin: 0;
   padding: 10;
 }
-h1{
+h1 {
   text-align: center;
   font-weight: 500;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: "Fira Sans", sans-serif;
   position: relative;
 }
 
@@ -40,7 +40,6 @@ h1{
 
 .bg-custom-1 {
   background-color: #f6f9fa;
-  
 }
 
 .btn-outline {
@@ -50,7 +49,6 @@ h1{
   font-weight: bold;
   letter-spacing: none;
 }
-
 
 .nav li {
   display: inline-block;
@@ -73,10 +71,13 @@ body {
   display: flex;
   font-weight: 400;
   font-family: sans-serif;
-  
 }
 
-body, html, .App, #root, .outer {
+body,
+html,
+.App,
+#root,
+.outer {
   width: 100%;
   height: 100%;
 }
@@ -93,11 +94,11 @@ body, html, .App, #root, .outer {
 .inner {
   width: 450px;
   margin: auto;
-  background: #EAEFF3;
+  background: #eaeff3;
   box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
   padding: 40px 55px 45px 55px;
   border-radius: 15px;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .outer .form-control:focus {
@@ -115,3 +116,41 @@ body, html, .App, #root, .outer {
 .custom-control-label {
   font-weight: 400;
 }
+<<<<<<< HEAD
+=======
+
+/* carousel */
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+  display: flex;
+}
+.carousel-bg {
+  background-color: whitesmoke;
+}
+.carousel-caption {
+  position: absolute;
+  top: 0;
+}
+
+.carousel-caption h2 {
+  color: rgb(7, 7, 7);
+}
+
+.carousel img {
+  height: 400px;
+  padding: 30px;
+  margin: 40px;
+  border-radius: 10%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.carousel a {
+  margin: 0 auto;
+}
+@media (max-width: 900px) {
+  .carousel-caption h2 {
+    font-size: 2.5vw;
+  }
+}
+>>>>>>> 2c33449bf5be5c54e8bb23dfdb93decd66bfd36f

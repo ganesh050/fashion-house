@@ -44,6 +44,7 @@ const CartScreen = ({ match, location, history }) => {
         <ListGroup variant="flush">
           <Row>
             <Col md={3}>Item</Col>
+            <Col className="align-center">Name</Col>
             <Col className="align-center">Price</Col>
             <Col className="align-center">Qty</Col>
           </Row>
