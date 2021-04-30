@@ -5,6 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/Message";
 import Loader from "../components/Loader";
 import { listMyOrders } from "../actions/orderActions";
+import { PDFDownloadLink } from "@react-pdf/renderer";
+import Invoice from "../components/Invoice";
 
 const ManageOrderScreen = ({ location, history }) => {
   const dispatch = useDispatch();
@@ -15,6 +17,16 @@ const ManageOrderScreen = ({ location, history }) => {
   useEffect(() => {
     dispatch(listMyOrders());
   }, [dispatch]);
+
+  const showDownloadLink = (order) => (
+    <PDFDownloadLink
+      document={<Invoice order={order} />}
+      fileName="invoice.pdf"
+      className="btn btn-sm btn-block btn-outline-primary"
+    >
+      Download PDF
+    </PDFDownloadLink>
+  );
 
   const myOrders = () => (
     <Row>
@@ -69,6 +81,9 @@ const ManageOrderScreen = ({ location, history }) => {
           </Table>
         )}
       </Col>
+      <div className="row">
+        <div className="col">{showDownloadLink(orders)}</div>
+      </div>
     </Row>
   );
 
