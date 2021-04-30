@@ -1,7 +1,6 @@
 import React from "react";
 import { ListGroup, Tab, Row, Col } from "react-bootstrap";
 import ManageOrderScreen from "./ManageOrderScreen";
-import ProfileScreen from "./ManageOrderScreen";
 import ProfileUpdateScreen from "./ProfileUpdateScreen";
 
 const DashboardScreen = ({ location, history }) => {
