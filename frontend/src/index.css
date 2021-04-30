@@ -28,10 +28,21 @@
   padding: 10;
 }
 h1 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
   text-align: center;
   font-weight: 500;
   font-family: "Fira Sans", sans-serif;
   position: relative;
+}
+
+h2 {
+  font-size: 1.4rem;
+  padding: 0.5rem 0;
+}
+
+h3 {
+  padding: 1rem 0;
 }
 
 .rating span {
@@ -60,9 +71,6 @@ a:link,
 a:visited {
   background-color: none;
   color: black;
-  padding: 14px 20px;
-  text-align: center;
-  text-decoration: none;
   display: inline-block;
 }
 
